@@ -1,5 +1,5 @@
+const a = () => {
+  return "hello, world!";
+};
 
-let a = () => {
-  console.log('hello, world!')
-}
-a()
+module.exports = a;
