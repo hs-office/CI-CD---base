@@ -1,3 +1,3 @@
-function greet(name) {
+function greets(name) {
   return `hello, ${name}!`;
 }
