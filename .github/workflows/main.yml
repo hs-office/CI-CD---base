@@ -1,11 +1,13 @@
-name: Run JavaScript File
+name: Run JavaScript Tests
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  run-js:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +17,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 18
 
-      - name: Run hello world.js
-        run: node 'hello world.js'
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
