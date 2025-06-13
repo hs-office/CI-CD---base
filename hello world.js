@@ -1,1 +1,5 @@
-console.log('hello, world!')
+
+let a = () => {
+  console.log('hello, world!')
+}
+a()
