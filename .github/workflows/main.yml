@@ -18,4 +18,4 @@ jobs:
           node-version: '18'
 
       - name: Run hello world.js
-        run: hello world.js
+        run: node 'hello world.js'
